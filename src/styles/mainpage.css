@@ -1,0 +1,333 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+.main-page{
+    background: url(../assets/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height:100vh;
+    padding-bottom:30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 30px 30px 50px #00000080;
+}
+.main-page p{
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;   
+}
+.banner-title{
+    padding-top: 16rem;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: flex-start;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+.socail-icons{
+    position: absolute;
+right: 0;
+top: 50%;
+}
+.socail-icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-right:30px;
+}
+.icon{
+    font-size: 26px;
+    margin: 10px 0;
+}
+.opp{
+    display: flex;
+    background: #1A1A1A;
+    color:#fff;
+    padding: 5rem 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+.grid{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+.grid-area{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.gird-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.grid-area .gird-item:nth-child(even){
+    flex-direction: row-reverse;
+}
+.grid-img{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-text{
+    background: #222222;
+    padding: 20px 40px;
+    color: #fff;
+    text-align: center;
+    width:50%;
+    height: 450px;
+    box-shadow: 20px 20px 50px #0000009E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10rem;
+}
+.services{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1A1A1A;
+    font-family: 'Josefin Sans', sans-serif; 
+    padding-top: 8rem;
+}
+.services-card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 361px;
+    box-shadow: 20px 20px 50px #00000080;
+height: 482px;
+background: #222222;
+margin: 0 30px;
+}
+.services-card .card:first-child{
+    margin-top: -40px;
+}
+.services-card .card:nth-child(2){
+    margin-top:40px;
+}
+.card-text{
+    margin-top: 40px;
+}
+.portfolio{
+    width: 100%;
+    padding-top: 6rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    background: #1A1A1A;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.profolio-items{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.protfilo-cards ,.protfilo-cards-2{
+    width: 85%;
+  display: flex;
+   align-items: center;
+  justify-content:center;
+  margin-top: 6rem;
+}
+.protfilo-cards.reverse{
+    display: flex;
+    width:85%;
+    align-items: center;
+    justify-content:center;
+    margin-top: 0;
+    flex-direction: row-reverse;
+}
+
+.protfilo-cards-2{
+    justify-content: space-between;
+    margin-top: 0;
+}
+.protfilo-cards-2 .portfolio-card{
+    width: 592px;
+    height: 428px; 
+}
+.protfilo-cards-2 .portfolio-card img{
+    width: 592px;
+    height: 428px;
+}
+.portfolio-card{
+    position: relative;
+}
+.protfilo-cards-2 .portfolio-card .por-text{
+width:83%;
+left: 5.8%;
+}
+.por-text{
+    position: absolute;
+    width: 86.5%;
+    display: flex;
+    top: 9.4%;
+    left: 5%;
+    padding:20px 30px;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg,#000000E3,#0000007D,#00000000);
+}
+
+.protfilo-cards .portfolio-card:first-child{
+    width: 800px;
+    height:428px;
+}
+.protfilo-cards .portfolio-card:nth-child(2){
+    width: 370px;
+}
+.protfilo-cards .portfolio-card:nth-child(2) .por-text{
+left: 9%;
+}
+
+.protfilo-cards .portfolio-card img:first-child {
+   width: 800px;
+   height:428px;
+}
+.protfilo-cards .portfolio-card:nth-child(2) img{
+    width: 420px;
+}
+.kurta .por-text{
+left: 9.3% !important;
+width: 87.8%;
+top: 9.2%;
+}
+.touch{
+    width: 100%;
+    padding-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1A1A1A;
+}
+.touch-block{
+    margin-top: 5rem;
+    box-shadow: 20px 20px 50px #00000080;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    flex-direction: column;
+}
+.touch-block h3{
+    font-size: 1.3rem;
+    padding: 20px 0;
+}
+.touch-block p{
+    text-align: center;
+    padding: 20px;
+}
+.touch-block button{
+    background: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    outline: none;
+    padding: 20px 30px;
+    border-radius: 32px;
+    margin: 20px 0;
+}
+.clients{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #1A1A1A;
+    padding-top: 11rem;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+.client-area{
+    margin-top:5rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.client-area.process{
+    width: 90%;
+}
+.country-card{
+    width: 278px;
+    height: 278px;
+    display: flex;
+    margin-bottom: 60px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 50px #0000009E;
+    background: #222222;
+    color: #fff;
+
+}
+.process-card{
+    width: 247px;
+height: 338px;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+box-shadow: 20px 20px 50px #0000009E;
+}
+.process-card h3{
+    padding: 20px 0;
+}
+.process-card img{
+ width: 120px;
+ margin: 20px 0;
+}
+.process-card:nth-child(even){
+    margin-top: 30px;
+}
+.process-card:nth-child(odd){
+    margin-top: -30px;
+}
+.process{
+    padding-bottom: 10rem;
+}
+.card-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

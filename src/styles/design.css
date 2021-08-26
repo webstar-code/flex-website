@@ -1,0 +1,122 @@
+.connect.design{
+    overflow-x: hidden;
+}
+.desgin-view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.design-tiles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.design-tiles h1{
+    margin: 0 20px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+}
+.design-tiles h1.active{
+    font-size: 2.4rem;
+    transition: 0.3s ease;
+}
+.active-design-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+.line{
+    width: 70px;
+    height: 3px;
+    margin: 0 20px;
+    background: #000;
+    transition: 0.3s ease;
+}
+.line.active{
+    background: #fff;
+    transition: 0.3s ease;
+}
+.circle-view{
+    margin-top: 4rem;
+    position: relative;
+}
+.logo-design{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.socail-design{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    right:27%;   
+}
+.progresive-desig{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 11%;
+    right:27%;   
+}
+.logo-design.website{
+    top:6%;
+}
+.socail-design h3{
+    margin-left: 30px;
+}
+.brand-design{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 13%;
+    left:26%;    
+}
+.circle-view h3{
+    font-size: 1rem;
+}
+.connect-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    
+}
+.connect-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 32%;
+    text-align: center;
+    font-size: 18px;
+}
+.connect-area button{
+    background: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    outline: none;
+    padding: 20px 30px;
+    border-radius: 32px;
+    margin: 20px 0;
+    font-weight: 700;
+}
+.connect-i .icon{
+    margin: 0 20px;
+}

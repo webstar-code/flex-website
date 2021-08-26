@@ -1,0 +1,25 @@
+.footer{
+    width: 100%;
+    background: #1A1A1A;
+    box-shadow: 0px -20px 20px #00000021;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+.footer .icon{
+    margin: 10px 20px;
+}
+.footer-social-icons,.contact-details,.terms-services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0; font-family: 'Josefin Sans', sans-serif;
+}
+.contact-details p,.terms-services p{
+    margin: 0 30px;
+}
+.terms-services p{
+    text-decoration: underline;
+}

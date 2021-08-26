@@ -40,4 +40,30 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    function flyingText(className){
+    document.querySelector(`${className} h1`).innerHTML=document.querySelector(`${className} h1`).textContent.replace(/./g,"<span>$&</span>")
+    let spans = document.querySelectorAll(`${className} h1 span`)
+     spans.forEach((span,i)=>{
+    let left =window.innerWidth*Math.random()
+    let top =window.innerHeight*Math.random()
+    if(Math.random()<0.5){
+        span.style.left="-"+left+'px'
+    }
+    else{
+        span.style.left=left+'px'
+    }
+    if(Math.random()<0.5){
+        span.style.top="-"+top+'px'
+    }
+    else{
+        span.style.top=top+'px'
+    }
+})
+    }
+
+    flyingText(".flying-text-area")
+    flyingText(".flying-text-area-2")
+    flyingText(".flying-text-area-3")
+  </script>
 </html>
