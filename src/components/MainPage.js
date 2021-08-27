@@ -16,21 +16,21 @@ import idea from '../assets/idea.png'
 import notes from '../assets/notes.png'
 import creativity from '../assets/creativity.png'
 import production from '../assets/production.png'
-const MainPage = () => {
+const MainPage = ({setIndex,index}) => {
     return (
         <>
-        <div className="main-page" data-aos="fade-up">
             <Header/>
-            <div className="banner-title">
-               <h1>GET FLEXECUTED</h1>
-            </div>
-            <Link to="business" smooth={true} duration={1000}><p>Scroll Down</p></Link>
-        
             <div className="socail-icons">
                <AiFillFacebook className="icon"/>
                <AiFillInstagram className="icon"/>
                <AiFillTwitterSquare className="icon"/>
             </div>
+        <div className="main-page" data-aos="fade-up">
+            <div className="banner-title">
+               <h1>GET FLEXECUTED !</h1>
+            </div>
+            <Link className="link" to="business" smooth={true} duration={1000}><p>Scroll Down</p></Link>
+        
         </div>
         <div className="opp">
             <div className="grid" id="business" data-aos="fade-up">
@@ -64,7 +64,7 @@ const MainPage = () => {
             </div>
         </div>
         <Services/>
-        <Portfolio/>
+        {/* <Portfolio setIndex={setIndex} index={index}/> */}
         <div className="touch">
             <div className="touch-block">
                 <h3>WHEN SUCCESS MATTERS</h3>

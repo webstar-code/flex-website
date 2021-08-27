@@ -3,7 +3,8 @@ import logo from '../assets/flex-logo.png'
 import '../styles/portfolio.css'
 import Slider from '../components/Slider'
 import {IoMdClose} from 'react-icons/io'
-const Portfolio = () => {
+const Portfolio = ({index}) => {
+    console.log(index)
     return (
         <div className="connect portfolio-page">
             <div className="top-sec">
@@ -15,7 +16,7 @@ const Portfolio = () => {
                 </div>
             </div>
             <h1>Portfolio</h1>
-            <Slider/>
+            <Slider index={index}/>
             </div>
     )
 }

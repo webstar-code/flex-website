@@ -2,9 +2,9 @@ import React ,{useState}from 'react'
 import {data} from './SliderData'
 import {FaLongArrowAltRight} from 'react-icons/fa'
 import {FaLongArrowAltLeft} from 'react-icons/fa'
-const Slider = () => { 
+const Slider = ({index}) => { 
 
-    const [current,setCurrent]=useState(0)
+    const [current,setCurrent]=useState(index)
     const lengths = data.length
 
     const preSlide=()=>{

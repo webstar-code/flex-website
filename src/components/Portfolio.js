@@ -1,4 +1,5 @@
 import React from 'react'
+import {useHistory} from 'react-router-dom'
 import liteNLamp from '../assets/lite-lamp.png'
 import domineum  from '../assets/dominum.png'
 import gokul  from '../assets/gokul.png'
@@ -6,7 +7,12 @@ import healthy  from '../assets/healthy.png'
 import jd  from '../assets/jd.png'
 import kutra  from '../assets/kutra.png'
 import {AiOutlineEye} from 'react-icons/ai'
-const Portfolio = () => {
+const Portfolio = ({setIndex,index}) => {
+    const history = useHistory()
+    const pushToProtFolio=(num)=>{
+      setIndex(num)
+      history.push('/portfolio')
+    }
     return (
         <div className="portfolio">
             <h2>PORTFOLIO</h2>
@@ -16,7 +22,7 @@ const Portfolio = () => {
                         <img src={liteNLamp} alt="" />
                         <div className="por-text">
                             <h3>Lite N Lamps</h3>
-                            <div className="eye">
+                            <div className="eye" onClick={()=>pushToProtFolio(0)}>
                                 <AiOutlineEye/>
                             </div>
                         </div>
@@ -25,7 +31,7 @@ const Portfolio = () => {
                          <img src={domineum} alt="" />
                          <div className="por-text">
                             <h3>Domineum</h3>
-                            <div className="eye">
+                            <div className="eye" onClick={()=>pushToProtFolio(1)}>
                                 <AiOutlineEye/>
                             </div>
                         </div>
@@ -41,7 +47,7 @@ const Portfolio = () => {
                             </div>
                         </div>
                     </div>
-                <div className="portfolio-card">
+                <div className="portfolio-card margin-right">
                         <img src={healthy} alt="" />
                         <div className="por-text">
                             <h3>Healthy Nutrients</h3>

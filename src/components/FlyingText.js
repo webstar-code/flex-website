@@ -8,6 +8,9 @@ const FlyingText = () => {
       setTimeout(()=>{
          setDown('down')
       },5000)
+      setTimeout(()=>{
+         history.push('/home')
+      },8000)
     return (
         <>
         <div className={`logo up ${down}`} onClick={()=>history.push('/home')}>

@@ -15,22 +15,31 @@
     position: relative;
     box-shadow: 30px 30px 50px #00000080;
 }
+.link{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%);
+}
 .main-page p{
     font-family: 'Josefin Sans', sans-serif;
     cursor: pointer;   
 }
 .banner-title{
-    padding-top: 16rem;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
     display: flex;
-    justify-content: flex-start;
     justify-content: flex-start;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
 }
 .socail-icons{
-    position: absolute;
+    position: fixed;
+    top: 50%;
 right: 0;
-top: 50%;
+z-index: 1000;
 }
 .socail-icons{
     display: flex;
@@ -177,12 +186,14 @@ margin: 0 30px;
 }
 
 .protfilo-cards-2{
-    justify-content: space-between;
+    align-items: flex-end;
+    justify-content:center;
     margin-top: 0;
 }
 .protfilo-cards-2 .portfolio-card{
     width: 592px;
     height: 428px; 
+    position: relative;
 }
 .protfilo-cards-2 .portfolio-card img{
     width: 592px;
@@ -229,6 +240,9 @@ left: 9%;
 left: 9.3% !important;
 width: 87.8%;
 top: 9.2%;
+}
+.eye{
+cursor: pointer;
 }
 .touch{
     width: 100%;
@@ -282,7 +296,7 @@ top: 9.2%;
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:center;
     flex-wrap: wrap;
 }
 .client-area.process{
@@ -292,6 +306,7 @@ top: 9.2%;
     width: 278px;
     height: 278px;
     display: flex;
+    margin: 0 40px;
     margin-bottom: 60px;
     align-items: center;
     justify-content: center;
@@ -303,6 +318,8 @@ top: 9.2%;
 .process-card{
     width: 247px;
 height: 338px;
+margin-left: 20px;
+margin-right: 20px;
 display: flex;
 align-items: center;
 flex-direction: column;
@@ -330,4 +347,38 @@ box-shadow: 20px 20px 50px #0000009E;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.margin-right{
+    margin-right: -20px;
+}
+@media(max-width:1270px){
+    .protfilo-cards .portfolio-card:nth-child(2){
+        width: 300px;
+    }
+    .protfilo-cards .portfolio-card:nth-child(2) img{
+        width: 300px;
+    }
+}
+
+@media(max-width:1100px){
+    .grid{
+        width: 90%;
+    }
+}
+@media(max-width:838px){
+    .grid-text{
+        height:300px;
+        font-size: 14px;
+        padding: 10px;
+        display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3;
+   overflow: hidden;
+    }
+    .grid-img{
+        height: 300px;
+    }
+    .grid-img img{
+        height: 90%;
+    }
 }
