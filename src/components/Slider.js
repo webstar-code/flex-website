@@ -16,7 +16,7 @@ const Slider = ({index}) => {
     }
     return (
         <div className="slider-container">
-            <div className="i-con" onClick={preSlide}>
+            <div className="i-con left " onClick={preSlide}>
             <FaLongArrowAltLeft className="arrow-icon"/>
             </div>
             {
@@ -25,7 +25,8 @@ const Slider = ({index}) => {
                     {
                       i===current&&(
                           <>
-                        <img src={itm.image} alt="" />
+                        <img src={itm.image} alt="" className={`${itm.image2&&'img-1'}`} />
+                        {itm.image2&&<img src={itm?.image2} alt="" className={`${itm.image2&&'img-2'}`} />}
                         <h1 className="silder-title">{itm.title}</h1>
                         </>
                       )
@@ -35,7 +36,7 @@ const Slider = ({index}) => {
              ))
             }
             <div onClick={nextSlide} className="i-con">
-        <FaLongArrowAltRight className="arrow-icon"/>
+        <FaLongArrowAltRight className="arrow-icon right"/>
         </div>
         </div>
     )

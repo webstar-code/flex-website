@@ -1,4 +1,5 @@
 import liteNLamp from '../assets/lnl.png'
+import lnl from '../assets/lnlres.png'
 import domineum  from '../assets/dom2.png'
 import gokul  from '../assets/gokul.png'
 import healthy  from '../assets/healthy.png'
@@ -8,6 +9,7 @@ import kutra  from '../assets/kutra.png'
 export const data=[
     {
         image:liteNLamp,
+        image2:lnl,
         title:'Lite N Lamps'
     },
     {

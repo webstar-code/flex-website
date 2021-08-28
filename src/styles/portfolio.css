@@ -42,3 +42,28 @@ transform: scale(1);
     height: 100%;
     padding-bottom:50px;
 }
+.img-2{
+    display: none;
+}
+@media(max-width:530px){
+    .img-2{
+        display: block;
+    }
+    .img-1{
+        display: none;
+    }
+    .left,.right{
+        position: absolute;
+    }
+    .left{
+        top:100%;
+        left: 10%;
+    }
+    .right{
+        top:100%;
+        right: 10%;
+    }
+    .img-slider img{
+        height: auto;
+    }
+}

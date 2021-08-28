@@ -368,11 +368,13 @@ box-shadow: 20px 20px 50px #0000009E;
 @media(max-width:838px){
     .grid-text{
         height:300px;
-        font-size: 14px;
         padding: 10px;
+    }
+    .grid-text p{
+        font-size: 14px;
         display: -webkit-box;
    -webkit-box-orient: vertical;
-   -webkit-line-clamp: 3;
+   -webkit-line-clamp: 7;
    overflow: hidden;
     }
     .grid-img{
@@ -380,5 +382,106 @@ box-shadow: 20px 20px 50px #0000009E;
     }
     .grid-img img{
         height: 90%;
+    }
+    .portfolio{
+        display: none;
+    }
+}
+
+@media(max-width:574px){
+
+    .card{
+        height: 285px;
+        margin: 0 10px;
+    }
+    .card-2 .card-img img{
+        height: 100px;
+        width: 100px;
+    }
+    .banner-title{
+        top: 66%;
+    }
+    .grid h1{
+        text-align: center;
+    }
+    .grid-text{
+        height:250px;
+    }
+    .grid-img{
+        height: 250px;
+    }
+    .banner-title h1{
+        font-size: 22px;
+         }
+    
+}
+@media(max-width:477px){
+    .grid-text{
+        height:200px;
+    }
+    .grid-img{
+        height: 200px;
+    }
+    .grid-img.comp img{
+        height: 80%;
+        width: 110%;
+    }
+    .country-card{
+        height: 150px;
+        width: 40%;
+        margin: 10px;
+    }
+    .client-area{
+        width: 100%;
+    }
+    .client-area.process .process-card{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .client-area.process .process-card:nth-child(even){
+        margin-left: 40px;
+        margin-top: 0;
+    }
+    .client-area.process .process-card:nth-child(odd){
+        margin-left: -40px;
+        margin-top: 0px;
+    }
+}
+@media(max-width:422px){
+    .grid-text{
+        height:150px;
+    }
+    .grid-img{
+        height: 150px;
+    }
+    .grid-text p{
+        -webkit-line-clamp: 4;
+        font-size: 12px;
+    }
+    .grid h1{
+        font-size: 22px;
+    }
+    .banner-title{
+        top: 63%;
+    }
+    .banner-title h1{
+        font-size: 18px;
+    }
+    .touch-block h3{
+      text-align: center;
+      font-size: 16px;
+    }
+}
+@media(max-width:404px){
+    .card-2 .card-text h3{
+        font-size: 13px;
+    }
+    .card{
+        height: 232px;
+        
+    }
+    .card-2 .card-img img{
+        height: 66px;
+        width: 66px;
     }
 }

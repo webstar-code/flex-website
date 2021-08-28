@@ -23,3 +23,12 @@
 .terms-services p{
     text-decoration: underline;
 }
+@media(max-width:574px){
+    .contact-details{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .contact-details p{
+        margin: 10px 0;
+    }
+}

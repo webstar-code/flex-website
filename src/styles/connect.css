@@ -50,3 +50,20 @@ form button{
 .i-connect{
     margin:0 20px;
 }
+
+@media(max-width:945px){
+    .connect-form{
+        width: 95%;
+    }
+}
+@media(max-width:715px){
+    .connect{
+        padding: 0px;
+    }
+    .connect-form{
+        padding:30px 10px;
+    }
+    form{
+        width: 90%;
+    }
+}
