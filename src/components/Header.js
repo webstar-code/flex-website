@@ -1,6 +1,6 @@
 import React ,{useState}from 'react'
 import '../styles/header.css'
-import logo from '../assets/flex-logo.png'
+import { FLEX_LOGO2X } from '../assets'
 import burger from '../assets/burger.png'
 import {Link} from 'react-router-dom'
 import {IoMdClose} from 'react-icons/io'
@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div className="header">
             <div className="logo">
-             <img src={logo} alt="" />
+             <img src={FLEX_LOGO2X} alt="" />
             </div>
             <div className="burger" onClick={()=>setShow(show===""?'show':'')}>
                  <img src={burger} alt="" />
@@ -18,7 +18,7 @@ const Header = () => {
             <div className={`top-header ${show}`}>
             <div className="top-sec">
                         <div className="logo">
-                        <img src={logo} alt="" />
+                        <img src={FLEX_LOGO2X} alt="" />
                         </div>
                         <div className="burger" onClick={()=>setShow(show===""?'show':'')}>
                             <IoMdClose className="close"/>

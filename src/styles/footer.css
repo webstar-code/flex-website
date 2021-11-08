@@ -8,8 +8,13 @@
     flex-direction: column;
     padding: 40px 20px;
 }
+.footer-logo > img {
+    width: 108px;
+    cursor: pointer;
+}
 .footer .icon{
     margin: 10px 20px;
+    cursor: pointer;
 }
 .footer-social-icons,.contact-details,.terms-services{
     display: flex;
@@ -17,8 +22,17 @@
     justify-content: center;
     margin: 20px 0; font-family: 'Josefin Sans', sans-serif;
 }
+.contact-details p {
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
 .contact-details p,.terms-services p{
     margin: 0 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.terms-services {
+    margin-top: 5rem;
 }
 .terms-services p{
     text-decoration: underline;
