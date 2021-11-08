@@ -171,7 +171,11 @@
 .card-text{
     margin-top: 40px;
 }
-.portfolio{
+
+
+
+
+ .portfolio{
     width: 100%;
     padding-top: 6rem;
     display: flex;
@@ -181,12 +185,69 @@
     background: #1A1A1A;
     font-family: 'Josefin Sans', sans-serif;
 }
-.profolio-items{
+
+.portfolio .portfolio-items {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.portfolio  .portfolio-items .portfolio-item {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 50px 0px;
+    background: #2A2A2A;
+}
+.images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.image-1 {
+    width: 100%;
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 3;
+
+}
+.image-2 {
+    height: 198px;
+}.image-3 {
+    height: 198px;
+}
+
+.des {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px;
+}
+.des > h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.des > img {
+    width: 100px;
+    margin-right: 40px;
+}
+
+.portfolio  .portfolio-items  .reverse {
+    align-self: end;
+}
+
+
+/*.profolio-items{
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 .protfilo-cards ,.protfilo-cards-2{
     width: 85%;
@@ -254,7 +315,7 @@ left: 9%;
 }
 .protfilo-cards .portfolio-card:nth-child(2) img{
     width: 420px;
-}
+} */
 .kurta .por-text{
 left: 9.3% !important;
 width: 87.8%;
