@@ -8,7 +8,7 @@ import mockup3 from '../assets/mockup-3.png'
 import { ANA_MOCKUP, HUNGER_MOCKUP, HEALTHY_MOCKUP } from '../assets'
 import { MACEDONIA, USA, NETHERLANDS, NIGERIA, UAE, INDIA, CANADA, ALBANIA, AUSTRALIA, } from '../assets'
 import { Link } from 'react-scroll'
-import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare } from 'react-icons/ai'
+import { AiFillBehanceSquare, AiFillFacebook, AiFillInstagram, AiFillTwitterSquare } from 'react-icons/ai'
 import Services from './Services'
 import Portfolio from './Portfolio'
 import CountryCard from './CountryCard'
@@ -26,6 +26,7 @@ const MainPage = ({ setIndex, index }) => {
             <div className="socail-icons">
                 <AiFillFacebook className="icon" />
                 <AiFillInstagram className="icon" />
+                <AiFillBehanceSquare className="icon" />
                 <AiFillTwitterSquare className="icon" />
             </div>
             <div className="main-page" data-aos="fade-up">

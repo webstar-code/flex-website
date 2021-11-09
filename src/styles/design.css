@@ -1,11 +1,20 @@
-.connect.design{
+.design{
     overflow-x: hidden;
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #1A1A1A;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .desgin-view{
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 .design-tiles{
     display: flex;
@@ -26,7 +35,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 0;
+    padding: 20px 0;
+    padding-bottom: 0px;
 }
 .line{
     width: 70px;
@@ -40,9 +50,110 @@
     transition: 0.3s ease;
 }
 .circle-view{
-    margin-top: 4rem;
+    width: 125%;
+    height: 800px;
+    margin-top: 3rem;
     position: relative;
+    background: url("../assets//circle.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
+
+.main-wrapper {
+    position: relative;
+    width: 100%;
+    height: 512px;
+}
+
+.wrapper{
+    position: absolute;
+    top: calc(75% - 50px);
+    left: calc(50% - 50px);
+  }
+  .item{
+    transition: .5s;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #4b134f;
+    display: inline-block;
+    margin: 0;
+    font-size: 3em;
+    font-family: sans-serif;
+    color: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .controls{
+    position: absolute;
+    top: 50%;
+    width: 99%;
+    text-align: center;
+  }
+  .left, .right{
+    display: inline-block;
+    color: #fff;
+    font-size: 3em;
+    cursor: pointer;
+    width: 20px;
+    right: 20px;
+  }
+  
+  .left{
+    margin-right: 10px;
+  }
+  .right{
+    margin-left: 10px;
+  }
+  
+  /* skipable part */
+  .link-list{
+    position: absolute;
+    right: 20px;
+  }
+  .link-list>p{
+    color: #fff;
+    font-family: sans-serif;
+  }
+  .link-list>a{
+    text-decoration:none;
+    color: #fff  ;
+    font-family: sans-serif;
+  }
+  .coffee{
+    width: 96%;
+    position: absolute;
+    bottom: 0px;
+    text-align: right;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  .ptr{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: #c94b4b;
+    background: #4b134f;
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    text-decoration: none;
+    border: 1px solid #b74b4b;
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    bottom: 50px;
+    right: 20px;
+    transition: .3s;
+  }
+  a:hover{
+    transition: .3s;
+    transform: scale(1.1);
+  }
+
 .logo-design{
     display: flex;
     align-items: center;

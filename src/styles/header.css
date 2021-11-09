@@ -67,6 +67,10 @@
 .bottom-sec h3.active{
     background: #222222;
     box-shadow: 20px 20px 50px #00000080;
+    cursor: pointer;
+}
+.bottom-sec > h3:hover {
+    background-color: #22222280;
 }
 @media(max-width:370px){
     .bottom-sec{

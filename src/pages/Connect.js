@@ -2,18 +2,12 @@ import React from 'react'
 import '../styles/connect.css'
 import logo from '../assets/flex-logo.png'
 import {IoMdClose} from 'react-icons/io'
-import {AiFillFacebook,AiFillInstagram,AiFillTwitterSquare} from 'react-icons/ai'
+import {AiFillBehanceSquare, AiFillFacebook,AiFillInstagram,AiFillTwitterSquare} from 'react-icons/ai'
+import Header from '../components/Header'
 const Connect = () => {
     return (
         <div className="connect">
-            <div className="top-sec">
-                <div className="logo">
-                    <img src={logo} alt="" />
-                </div>
-                <div className="burger">
-                    <IoMdClose className="close"/>
-                </div>
-            </div>
+            <Header />
             <h1>Connect</h1>
             <div className="connect-form">
                 <form>
@@ -28,6 +22,7 @@ const Connect = () => {
             <div className="footer-social-icons">
                <AiFillFacebook className="icon i-connect"/>
                <AiFillInstagram className="icon i-connect"/>
+               <AiFillBehanceSquare className="icon i-connect" />
                <AiFillTwitterSquare className="icon i-connect"/>
             </div>
         </div>
