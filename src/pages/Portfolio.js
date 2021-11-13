@@ -2,22 +2,25 @@ import React from 'react'
 import logo from '../assets/flex-logo.png'
 import '../styles/portfolio.css'
 import Slider from '../components/Slider'
-import {IoMdClose} from 'react-icons/io'
-const Portfolio = ({index}) => {
-    console.log(index)
+import { IoMdClose } from 'react-icons/io'
+
+
+const Portfolio = ({ index }) => {
     return (
-        <div className="connect portfolio-page">
-            <div className="top-sec">
-                <div className="logo">
+        <div className="w-full h-full overflow-hidden">
+            <div className="w-full px-8 py-5 md:px-24 md:p-9 bg-transparent fixed flex items-center justify-between top-0 left-0 z-40">
+                <div className="w-24 cursor-pointer">
                     <img src={logo} alt="" />
                 </div>
-                <div className="burger">
-                    <IoMdClose className="close"/>
+                <div className="flex items-center justify-center cursor-pointer">
+                    <IoMdClose className="text-xl" />
                 </div>
             </div>
-            <h1>Portfolio</h1>
-            <Slider index={index}/>
-            </div>
+
+            <Slider index={index} />
+
+
+        </div>
     )
 }
 

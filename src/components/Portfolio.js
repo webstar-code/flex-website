@@ -25,6 +25,8 @@ import {
 } from '../assets'
 
 const OverLay = ({ setShowOverlay, images }) => {
+	const itemWidth = 384;
+
 	const [activeIndex, setActiveIndex] = useState(Math.round(images.length / 2) - 1);
 	const [slideamt, setSlideAmt] = useState(0);
 
@@ -35,26 +37,28 @@ const OverLay = ({ setShowOverlay, images }) => {
 	console.log(activeIndex);
 	return (
 		<div className="overlay-container">
-			<div className="inner-container">
-				<div className="close-icon" onClick={() => setShowOverlay(false)}>
-					<AiOutlineClose />
-				</div>
-				<div className="slider">
-					<div className="slider-images" style={{ left: `-${slideamt}px` }}>
-						{images.map((image, i) => (
-							<div className={`${activeIndex === i ? "active-slider-image " : "slider-image"}`}>
-								<img src={image} />
+			<div className="w-full md:w-4/5 mx-auto flex justify-end align-bottom p-6 md:p-12" onClick={() => setShowOverlay(false)}>
+				<AiOutlineClose className="text-4xl cursor-pointer" />
+			</div>
+			<div className="mt-12 sm:mt-32 md:mt-20 mx-auto w-full md:w-4/5 flex flex-col items-center overflow-hidden">
+				<div className="flex flex-col items-center justify-center overflow-hidden">
+					<div className="relative w-full m-0 grid grid-rows-1 auto-cols-max grid-flow-col px-16 transition-all overflow-hidden"
+						style={{ left: `-${activeIndex * itemWidth + 64}px`, transform: 'translate(35%, 0px)', height: `${itemWidth}px` }}>
+						{images.map((image, i) =>
+							<div className="flex items-center justify-center" style={{ width: `${itemWidth}px` }}>
+								<img className={`${activeIndex === i ? 'w-full' : 'w-72 opacity-75'} object-contain`} src={image} style={{ boxShadow: '20px 19px 20px 4px #0000009E' }} />
 							</div>
-						))}
+						)}
 					</div>
-					<div className="slider-ellipses">
+					<div className="flex justify-center items-center">
 						{images.map((item, i) => {
-							return <span onClick={() => setActiveIndex(i)} className={`${activeIndex === i ? 'active-ellipses' : 'ellipses'}`}>
-								<BsDot /></span>
+							return <span onClick={() => setActiveIndex(i)} className={`${activeIndex === i ? 'w-14 h-14' : 'h-10 w-10'} cursor-pointer`}>
+								<BsDot className="w-full h-full" /></span>
 						})}
 					</div>
 				</div>
 			</div>
+
 		</div>
 	)
 }
@@ -92,24 +96,28 @@ const Portfolio = ({ setIndex, index }) => {
 			<h2>PORTFOLIO</h2>
 			<div className="portfolio-items">
 				<PCard images={[hunger1, hunger2, hunger3]} name="Restro Solutions" className="portfolio-item"
-					 />
+				/>
 				<PCard images={[onehealthwell1, onehealthwell2, onehealthwell3]} name="One health wellness" className="portfolio-item reverse"
-					 />
+				/>
 
 				<PCard images={[ana1, ana2, ana3]} name="Ana" className="portfolio-item"
-					 />
+				/>
 
 				<PCard images={[litenlamps1, litenlamps2, litenlamps3]} name="Lite n Lamps" className="portfolio-item reverse"
-					 />
+				/>
 
 				<PCard images={[domineum1, domineum2, domineum3]} name="Domineum" className="portfolio-item "
-					 />
+				/>
 
 
 
 			</div>
-
-			<RouterLink to="/portfolio"><button className="main-page-btn">View All</button></RouterLink>
+			<RouterLink to="/portfolio">
+				<button className="bg-white tracking-widest border-none outline-none px-12 py-6 rounded-full 
+				font-extrabold  cursor-pointer shadow-lg text-primary">
+					View All
+				</button>
+			</RouterLink>
 
 		</div>
 	)

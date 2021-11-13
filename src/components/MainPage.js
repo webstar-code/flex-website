@@ -37,8 +37,8 @@ const MainPage = ({ setIndex, index }) => {
 					<h1>GET FLEXECUTED</h1>
 				</div>
 				<Link className="link" to="business" smooth={true} duration={1000}><p>Scroll Down</p></Link>
-
 			</div>
+			
 			<div className="opp">
 				<div className="grid" id="business" data-aos="fade-up">
 					<h1>A New World of Business Opportunities</h1>
@@ -79,18 +79,18 @@ const MainPage = ({ setIndex, index }) => {
 			<Services />
 			<Portfolio setIndex={setIndex} index={index} />
 			{/* <ResponsivePortfolio setIndex={setIndex} index={index} /> */}
-			<div className="touch">
-				<div className="touch-block">
-					<h3>WHEN SUCCESS MATTERS</h3>
-					<p>
+			<div className="w-full flex items-center justify-center bg-primary pt-24 p-6 md:pt-48 md:p-24 ">
+				<div className="bg-secondary md:mx-28 my-0 w-full md:w-9/12 flex flex-col items-center justify-center py-10 md:p-14 drop-shadow-2xl" style={{ boxShadow: '20px 20px 25px #0000009E' }}>
+					<h3 className="text-base font-black md:text-2xl py-5 text-center">WHEN SUCCESS MATTERS</h3>
+					<p className="w-full md:w-11/12 text-lg leading-normal text-center px-5 py-5">
 						We are committed to building robust and scalable designs and applications that create efficient business processes and adds value to our client's businesses.
 					</p>
-					<RouterLink to="/connect"><button>GET IN TOUCH</button></RouterLink>
+					<RouterLink to="/connect"><button className="bg-white border-none outline-none my-5 px-8 py-4 md:px-12 md:py-6 rounded-full font-black tracking-widest text-sm cursor-pointer shadow-lg text-primary">GET IN TOUCH</button></RouterLink>
 				</div>
 			</div>
-			<div className="clients">
+			<div className="w-full flex flex-col items-center justify-center bg-primary pt-44">
 				<h2>CLIENTS FROM</h2>
-				<div className="client-area">
+				<div className="w-full md:w-3/5 flex items-center justify-center flex-wrap mt-20">
 					<CountryCard country="India" flag={INDIA} />
 					<CountryCard country="USA" flag={USA} />
 					<CountryCard country="Australia" flag={AUSTRALIA} />
@@ -122,7 +122,11 @@ const MainPage = ({ setIndex, index }) => {
 					<p>
 						We are committed to building robust and scalable designs and applications that create efficient business processes and adds value to our client's businesses.
 					</p>
-					<RouterLink to="/connect"><button>GET IN TOUCH</button></RouterLink>
+					<RouterLink to="/connect">
+						<button className="bg-white border-none outline-none px-12 py-6 rounded-full font-extrabold tracking-wide cursor-pointer shadow-lg text-primary">
+							Get in Touch
+						</button>
+					</RouterLink>
 				</div>
 			</div>
 			<Footer />
