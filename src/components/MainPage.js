@@ -85,12 +85,12 @@ const MainPage = ({ setIndex, index }) => {
 					<p className="w-full md:w-11/12 text-lg leading-normal text-center px-5 py-5">
 						We are committed to building robust and scalable designs and applications that create efficient business processes and adds value to our client's businesses.
 					</p>
-					<RouterLink to="/connect"><button className="bg-white border-none outline-none my-5 px-8 py-4 md:px-12 md:py-6 rounded-full font-black tracking-widest text-sm cursor-pointer shadow-lg text-primary">GET IN TOUCH</button></RouterLink>
+					<RouterLink to="/connect"><button className="bg-white font-bold font-Josefin border-none outline-none my-5 px-8 py-4 md:px-12 md:py-6 rounded-full tracking-widest text-sm cursor-pointer shadow-lg text-primary">Get in touch</button></RouterLink>
 				</div>
 			</div>
 			<div className="w-full flex flex-col items-center justify-center bg-primary pt-44">
-				<h2>CLIENTS FROM</h2>
-				<div className="w-full md:w-3/5 flex items-center justify-center flex-wrap mt-20">
+				<h2 className="text-2xl font-semibold">CLIENTS FROM</h2>
+				<div className="w-full md:w-4/5 flex items-center justify-center flex-wrap mt-20">
 					<CountryCard country="India" flag={INDIA} />
 					<CountryCard country="USA" flag={USA} />
 					<CountryCard country="Australia" flag={AUSTRALIA} />
@@ -107,7 +107,7 @@ const MainPage = ({ setIndex, index }) => {
 				</div>
 			</div>
 			<div className="clients process">
-				<h2>PROCESS</h2>
+				<h2 className="text-2xl font-semibold">PROCESS</h2>
 				<div className="client-area process">
 					<Processcard img={idea} text="STRATEGY" />
 					<Processcard img={notes} text="CONCEPT" />

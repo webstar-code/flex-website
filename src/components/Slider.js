@@ -3,7 +3,7 @@ import { data } from './SliderData'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import { FaLongArrowAltLeft } from 'react-icons/fa'
 import { BsDot } from 'react-icons/bs'
-const Slider = ({ index }) => {
+const Slider = ({ index = 0 }) => {
   const itemWidth = 384;
   const [currentItem, setCurrentItem] = useState(data[index]);
   const [currentIndex, setCurrentIndex] = useState(index)
@@ -25,6 +25,11 @@ const Slider = ({ index }) => {
 
   const [activeIndex, setActiveIndex] = useState(Math.round(currentItem.images.length / 2 - 1));
 
+  // useEffect(() => {
+  //   console.log("changed");
+  //   setCurrentItem(data[currentIndex]);
+  //   setActiveIndex(currentItem.images.length / 2 - 1);
+  // }, [currentIndex])
 
 
   return (

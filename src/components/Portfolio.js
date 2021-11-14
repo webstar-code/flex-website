@@ -12,6 +12,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { BsDot } from 'react-icons/bs'
 import { CgArrowLongRight } from 'react-icons/cg'
 import { Link as RouterLink } from 'react-router-dom'
+import {data} from './SliderData'
 
 import {
 	ana1, ana2, ana3,
@@ -64,7 +65,8 @@ const OverLay = ({ setShowOverlay, images }) => {
 }
 
 
-const PCard = ({ images, className, name }) => {
+const PCard = ({ images, className, name, i }) => {
+	const history = useHistory();
 	const [showOverlay, setShowOverlay] = useState(false);
 
 	return (
@@ -76,7 +78,7 @@ const PCard = ({ images, className, name }) => {
 			</div>
 			<div className="des">
 				<h1>{name}</h1>
-				<img src={UNION} />
+				<img src={UNION} className="cursor-pointer" onClick={() => history.push('/portfolio', { state: { name, index: i } })} />
 			</div>
 
 			{showOverlay && <OverLay setShowOverlay={setShowOverlay} images={images} />}
@@ -93,9 +95,16 @@ const Portfolio = ({ setIndex, index }) => {
 	}
 	return (
 		<div className="portfolio">
-			<h2>PORTFOLIO</h2>
+			<h2 className="text-2xl font-semibold">PORTFOLIO</h2>
 			<div className="portfolio-items">
-				<PCard images={[hunger1, hunger2, hunger3]} name="Restro Solutions" className="portfolio-item"
+				{data.map((item, i) =>
+					(i % 2 == 0) ? 
+					<PCard images={item.images} name={item.title} i={i} className="portfolio-item" />
+					:
+					<PCard images={item.images} name={item.title} i={i} className="portfolio-item reverse" />
+				)}
+
+				{/* <PCard images={[hunger1, hunger2, hunger3]} name="Restro Solutions" className="portfolio-item"
 				/>
 				<PCard images={[onehealthwell1, onehealthwell2, onehealthwell3]} name="One health wellness" className="portfolio-item reverse"
 				/>
@@ -107,9 +116,7 @@ const Portfolio = ({ setIndex, index }) => {
 				/>
 
 				<PCard images={[domineum1, domineum2, domineum3]} name="Domineum" className="portfolio-item "
-				/>
-
-
+				/> */}
 
 			</div>
 			<RouterLink to="/portfolio">

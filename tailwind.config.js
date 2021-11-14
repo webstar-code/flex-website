@@ -13,8 +13,11 @@ module.exports = {
         secondary: '#222222',
         primaryText: "#FFFFFF",
         shadow: "#0000009E"
-      }
+      },
     },
+    fontFamily: {
+      'Josefin': ['Josefin Sans', 'sans-serif'],
+    }
   },
   variants: {
     extend: {},
