@@ -12,7 +12,7 @@ const Header = () => {
     console.log(pathname);
     console.log(pathname === '/connect')
     return (
-        <div className="header">
+        <div className="header bg-black">
             <div className="logo">
                 <img src={FLEX_LOGO2X} alt="" />
             </div>

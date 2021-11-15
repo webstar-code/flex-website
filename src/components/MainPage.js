@@ -23,6 +23,9 @@ import { gsap } from 'gsap'
 
 const MainPage = ({ setIndex, index }) => {
 
+
+
+
 	return (
 		<>
 			<Header />

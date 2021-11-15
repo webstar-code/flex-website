@@ -4,6 +4,7 @@ import '../styles/portfolio.css'
 import Slider from '../components/Slider'
 import { IoMdClose } from 'react-icons/io'
 import { Link, useLocation } from 'react-router-dom'
+import { data } from '../components/SliderData'
 
 
 const Portfolio = ({ index }) => {
@@ -23,9 +24,9 @@ const Portfolio = ({ index }) => {
                 </div>
             </div>
             {state ?
-                <Slider index={state.state.index} />
+                <Slider data={data} index={state.state.index} />
                 :
-                <Slider index={0} />
+                <Slider data={data} index={0} />
             }
 
 

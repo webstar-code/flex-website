@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { data } from './SliderData'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import { FaLongArrowAltLeft } from 'react-icons/fa'
 import { BsDot } from 'react-icons/bs'
-const Slider = ({ index = 0 }) => {
+const Slider = ({ data , index = 0 }) => {
   const itemWidth = 384;
   const [currentItem, setCurrentItem] = useState(data[index]);
   const [currentIndex, setCurrentIndex] = useState(index)
