@@ -31,7 +31,6 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    padding: 30px;
     transition: 0.3s ease-in-out;
 }
 .show{
@@ -52,6 +51,7 @@
     cursor: pointer;
 }
 .bottom-sec{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -61,7 +61,7 @@
 }
 .bottom-sec h3{
     font-size: 18px;
-    font-weight: bolder;
+    font-weight: bold;
     padding: 25px 30px;
     width: 491px;
     text-align: center;

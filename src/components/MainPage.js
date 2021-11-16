@@ -41,7 +41,7 @@ const MainPage = ({ setIndex, index }) => {
 				</div>
 				<Link className="link" to="business" smooth={true} duration={1000}><p>Scroll Down</p></Link>
 			</div>
-			
+
 			<div className="opp">
 				<div className="grid" id="business" data-aos="fade-up">
 					<h1>A New World of Business Opportunities</h1>
@@ -119,10 +119,11 @@ const MainPage = ({ setIndex, index }) => {
 				</div>
 			</div>
 
-			<div className="touch">
-				<div className="touch-block">
-					<h3>ARE YOU READY TO START?</h3>
-					<p>
+			{/* <ResponsivePortfolio setIndex={setIndex} index={index} /> */}
+			<div className="w-full flex items-center justify-center bg-primary pt-24 p-6 md:pt-48 md:p-24 ">
+				<div className="bg-secondary md:mx-28 my-0 w-full md:w-9/12 flex flex-col items-center justify-center py-10 md:p-14 drop-shadow-2xl" style={{ boxShadow: '20px 20px 25px #0000009E' }}>
+					<h3 className="text-base font-black md:text-2xl py-5 text-center">ARE YOU READY TO START?</h3>
+					<p className="w-full md:w-11/12 text-lg leading-normal text-center px-5 py-5">
 						We are committed to building robust and scalable designs and applications that create efficient business processes and adds value to our client's businesses.
 					</p>
 					<RouterLink to="/connect">

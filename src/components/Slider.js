@@ -39,14 +39,14 @@ const Slider = ({ data , index = 0 }) => {
           style={{ left: `-${activeIndex * itemWidth + 64}px`, transform: 'translate(35%, 0px)', height: `${itemWidth}px` }}>
           {currentItem.images.map((image, i) =>
             <div className="flex items-center justify-center" style={{ width: `${itemWidth}px` }}>
-              <img className={`${activeIndex === i ? 'w-full' : 'w-72 opacity-75'} object-contain`} src={image} style={{ boxShadow: '20px 19px 20px 4px #0000009E' }} />
+              <img className={`${activeIndex === i ? 'w-full' : 'w-72 opacity-75'} object-contain`} src={image} style={{ boxShadow: ' 8px 4px 20px 4px #0000009E' }} />
             </div>
           )}
         </div>
         <div className="flex justify-center items-center">
           {currentItem.images.map((item, i) => {
             return <span onClick={() => setActiveIndex(i)} className={`${activeIndex === i ? 'w-14 h-14' : 'h-10 w-10'} cursor-pointer`}>
-              <BsDot className="w-full h-full" /></span>
+              <BsDot className="w-full h-full select-none" style={{WebkitUserSelect: ""}} /></span>
           })}
         </div>
       </div>

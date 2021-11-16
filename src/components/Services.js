@@ -12,7 +12,7 @@ const Services = () => {
                         <img src={design} alt="" />
                     </div>
                     <div className="card-text">
-                        <h3>DESIGN</h3>
+                        <h3  className="text-base font-semibold">DESIGN</h3>
                     </div>
                 </div></Link>
                 <Link to="/development" className="card"><div className="card-2">
@@ -21,7 +21,7 @@ const Services = () => {
                         <img src={development} alt="" />
                     </div>
                     <div className="card-text">
-                        <h3>DEVELOPMENT</h3>
+                        <h3 className="text-base font-semibold">DEVELOPMENT</h3>
                     </div>
 
                 </div></Link>

@@ -34,7 +34,7 @@ const CountryCard = ({ country, flag }) => {
     return (
         <div className="country-card" ref={item}>
             <img src={flag} />
-            <h3 className="text-2xl font-black">{country}</h3>
+            <h3 className="text-base font-black">{country}</h3>
         </div>
     )
 }

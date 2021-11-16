@@ -12,7 +12,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { BsDot } from 'react-icons/bs'
 import { CgArrowLongRight } from 'react-icons/cg'
 import { Link as RouterLink } from 'react-router-dom'
-import {data} from './SliderData'
+import { data } from './SliderData'
 
 import {
 	ana1, ana2, ana3,
@@ -98,10 +98,10 @@ const Portfolio = ({ setIndex, index }) => {
 			<h2 className="text-2xl font-semibold">PORTFOLIO</h2>
 			<div className="portfolio-items">
 				{data.map((item, i) =>
-					(i % 2 == 0) ? 
-					<PCard images={item.images} name={item.title} i={i} className="portfolio-item" />
-					:
-					<PCard images={item.images} name={item.title} i={i} className="portfolio-item reverse" />
+					(i % 2 == 0) ?
+						<PCard images={item.images} name={item.title} i={i} className="portfolio-item" />
+						:
+						<PCard images={item.images} name={item.title} i={i} className="portfolio-item reverse" />
 				)}
 
 				{/* <PCard images={[hunger1, hunger2, hunger3]} name="Restro Solutions" className="portfolio-item"
@@ -119,12 +119,7 @@ const Portfolio = ({ setIndex, index }) => {
 				/> */}
 
 			</div>
-			<RouterLink to="/portfolio">
-				<button className="bg-white tracking-widest border-none outline-none px-12 py-6 rounded-full 
-				font-extrabold  cursor-pointer shadow-lg text-primary">
-					View All
-				</button>
-			</RouterLink>
+			<RouterLink to="/portfolio"><button className="bg-white font-bold font-Josefin border-none outline-none my-5 px-8 py-4 md:px-12 md:py-6 rounded-full tracking-widest text-sm cursor-pointer shadow-lg text-primary">View all</button></RouterLink>
 
 		</div>
 	)

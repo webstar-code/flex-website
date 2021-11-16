@@ -4,7 +4,7 @@ const Processcard = ({img,text}) => {
     return (
         <div className="process-card">
             <img src={img} alt="" />
-            <h3>{text}</h3>
+            <h3 className="text-base font-semibold py-5">{text}</h3>
         </div>
     )
 }

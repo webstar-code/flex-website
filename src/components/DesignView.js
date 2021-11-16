@@ -52,7 +52,7 @@ const DesignView = () => {
 
   const [activeItem, setActiveItem] = useState(graphicsData[activeIndex]);
 
-  const itemWidth = 450;
+  const itemWidth = 400;
   const [currentItem, setCurrentItem] = useState(graphicsData[1]);
   const [currentIndex, setCurrentIndex] = useState(activeIndex)
   const lengths = graphicsData.length
