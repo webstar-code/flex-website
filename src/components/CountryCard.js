@@ -1,16 +1,16 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const CountryCard = ({ country, flag }) => {
     const item = useRef(null);
+
     gsap.registerPlugin(ScrollTrigger);
-    useEffect(() => {
+    useLayoutEffect(() => {
         // gsap.to(".country-card", {
         //     scrollTrigger: {
         //         trigger: ".country-card",
         //         start: "top top",
-        //         end: "bottom top",
         //         markers: true,
         //         scrub: true,
         //     },
@@ -19,17 +19,18 @@ const CountryCard = ({ country, flag }) => {
         //     duration: 3
         // })
 
-        // gsap.from(item.current, {
+        // let x = gsap.from(".country-card", {
         //     scale: 0,
         //     ease: "none",
         //     scrollTrigger: {
-        //         trigger: item.current,
-        //         start: "center center",
+        //         trigger: ".country-card",
         //         scrub: true,
+        //         start: "top center",
+        //         // end: "top center",
         //         markers: true,
-        //         toggleActions: "restart pause none pause"
         //     },
         // });
+   
     }, []);
     return (
         <div className="country-card" ref={item}>

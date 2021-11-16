@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import Header from './Header'
 import '../styles/mainpage.css'
@@ -20,9 +20,50 @@ import creativity from '../assets/creativity.png'
 import production from '../assets/production.png'
 import ResponsivePortfolio from './ResponsivePortfolio'
 import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const MainPage = ({ setIndex, index }) => {
+	gsap.registerPlugin(ScrollTrigger);
 
+	useLayoutEffect(() => {
+		const box = '.country-card';
+		const boxes = gsap.utils.toArray(box);
+		boxes.forEach(box => {
+			ScrollTrigger.refresh();
+			gsap.from(box, {
+				x: -100,
+				scrollTrigger: {
+					trigger: box,
+					start: "20px 90%",
+					end: "top 30%",
+					toggleActions: "restart none none none",
+
+					immediateRender: false
+				}
+			})
+		})
+
+
+		const process_card = '.process-card';
+		const processes = gsap.utils.toArray(process_card);
+
+		processes.forEach((p) => {
+			ScrollTrigger.refresh();
+			gsap.from(p, {
+				scale: 0,
+				scrollTrigger: {
+					trigger: p,
+					start: "20px 90%",
+					end: "top 60%",
+					scrub: true,
+					toggleActions: "restart none none none",
+					immediateRender: false
+				}
+			})
+		})
+
+
+	}, []);
 
 
 
@@ -106,7 +147,6 @@ const MainPage = ({ setIndex, index }) => {
 					<CountryCard country="Singapore" flag={INDIA} />
 					<CountryCard country="Germany" flag={INDIA} />
 					<CountryCard country="Norway" flag={INDIA} />
-
 				</div>
 			</div>
 			<div className="clients process">
