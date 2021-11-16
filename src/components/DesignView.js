@@ -13,6 +13,7 @@ import { FaLongArrowAltLeft } from 'react-icons/fa'
 
 import website from '../assets/website.png'
 import Slider from './Slider'
+import { UNION } from '../assets'
 
 const graphicsData = [
   {
@@ -64,12 +65,16 @@ const DesignView = () => {
 
 
   const preSlide = () => {
-    setCurrentIndex(currentIndex === 0 ? lengths - 1 : currentIndex - 1)
+    if (currentIndex - 1 >= 0) {
+      setCurrentIndex(currentIndex - 1)
+    }
   }
 
   const nextSlide = () => {
-    console.log(currentIndex, lengths)
-    setCurrentIndex(currentIndex === lengths - 1 ? 0 : currentIndex + 1)
+    console.log(currentIndex, lengths);
+    if (currentIndex + 1 < lengths) {
+      setCurrentIndex(currentIndex + 1)
+    }
   }
 
   const handleGraphic = () => {
@@ -86,7 +91,7 @@ const DesignView = () => {
     <div className="desgin-view">
       <div className="flex items-center justify-center">
         <h1 onClick={handleGraphic} className={`${graphic && 'text-3xl transition-all'} text-base md:text-2xl transition-all cursor-pointer mr-2`}>Graphic Design</h1>
-        <h1 onClick={handleUIUX} className={`${uiux &&  'text-3xl transition-all'} text-base md:text-2xl transition-all cursor-pointer`}>UI/UX Design</h1>
+        <h1 onClick={handleUIUX} className={`${uiux && 'text-3xl transition-all'} text-base md:text-2xl transition-all cursor-pointer`}>UI/UX Design</h1>
       </div>
       <div className="active-design-area">
         <div className={`line ${graphic && 'active'}`}></div>
@@ -116,12 +121,12 @@ const DesignView = () => {
                   ))
                 }
               </div>
-              <div className="flex w-80 md:w-72 justify-between items-center">
+              <div className="flex w-80 md:w-72 mt-9 justify-between items-center">
                 <div className="" onClick={preSlide}>
-                  <FaLongArrowAltLeft className="text-gray-700 text-7xl md:text-9xl" />
+                  <img src={UNION} className={`cursor-pointer w-full h-full transform rotate-180 ${currentIndex - 1 < 0 ? 'opacity-50' : 'opacity-100 hover:scale-110'} `} />
                 </div>
                 <div onClick={nextSlide} className="">
-                  <FaLongArrowAltRight className="text-gray-700 text-7xl md:text-9xl" />
+                  <img src={UNION} className={`cursor-pointer w-full h-full transform ${currentIndex + 1 >= lengths ? 'opacity-50' : 'opacity-100 hover:scale-110'} `} />
                 </div>
               </div>
             </div>

@@ -34,7 +34,7 @@ const App = () => {
         <Router>
             {/* <FlyingText/> */}
             <Switch>
-                <ScrollToTop>
+                {/* <ScrollToTop> */}
                     <Route exact path="/" component={FlyingText} />
                     <Route exact path="/connect" component={Connect} />
                     <Route exact path="/home">
@@ -45,7 +45,7 @@ const App = () => {
                     </Route>
                     <Route exact path="/design" component={Design} />
                     <Route exact path="/development" component={Development} />
-                </ScrollToTop>
+                {/* </ScrollToTop> */}
             </Switch>
         </Router>
     )

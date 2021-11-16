@@ -71,10 +71,10 @@ const MainPage = ({ setIndex, index }) => {
 		<>
 			<Header />
 			<div className="socail-icons">
-				<AiFillFacebook className="icon" />
-				<AiFillInstagram className="icon" />
-				<AiFillBehanceSquare className="icon" />
-				<AiFillTwitterSquare className="icon" />
+				<a href="https://www.facebook.com/flexxited/" target="_blank"><AiFillFacebook className="icon " /></a>
+				<a href="https://www.instagram.com/flexxited/" target="_blank"><AiFillInstagram className="icon " /></a>
+				<a href="https://www.behance.net/flexxitbydixit" target="_blank"><AiFillBehanceSquare className="icon " /></a>
+				<a href="https://twitter.com/flexxited" target="_blank"><AiFillTwitterSquare className="icon" /></a>
 			</div>
 			<div className="main-page" data-aos="fade-up">
 				<div className="banner-title">

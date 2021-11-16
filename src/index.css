@@ -13,12 +13,11 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
+        -webkit-tap-highlight-color: transparent;
     }
     body{
         background: #000;
         color: #fff;
-        height: 100vh;
         font-family: 'Josefin Sans', sans-serif;
     }
     a{

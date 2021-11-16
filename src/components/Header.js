@@ -30,14 +30,14 @@ const Header = () => {
     const pathname = window.location.pathname;
 
     return (
-        <div className={`fixed bg-black top-0 left-0 flex items-center justify-between w-full h-12 md:h-14 px-5 py-10 md:py-8 md:px-8 z-20 transition-all
+        <div className={`fixed bg-primary top-0 left-0 flex items-center justify-between w-full h-12 md:h-24 px-5 py-10 md:py-8 md:px-8 z-20 transition-all
 			${!showHeader.show ? '-top-20 md:-top-36' : 'top-0'} 
 		`}>
             <div className="w-24 cursor-pointer">
                 <img src={FLEX_LOGO2X} alt="" />
             </div>
-            <div className="w-6 h-6" onClick={() => setShow(show === "" ? 'show' : '')}>
-                <img src={burger} alt="" />
+            <div className="w-6 h-6 cursor-pointer transform hover:scale-110 hover:rotate-180 transition-transform" onClick={() => setShow(show === "" ? 'show' : '')}>
+                <img className="w-full h-full" src={burger} alt="" />
             </div>
 
             <div className={`top-header ${show}`}>
@@ -48,8 +48,8 @@ const Header = () => {
                             <img src={FLEX_LOGO2X} alt="" />
                         </Link>
                     </div>
-                    <div className="burger" onClick={() => setShow(show === "" ? 'show' : '')}>
-                        <IoMdClose className="close" />
+                    <div className="w-6 h-6 hover:scale-50 cursor-pointer" onClick={() => setShow(show === "" ? 'show' : '')}>
+                        <IoMdClose className="text-5xl text-white" />
                     </div>
                 </div>
                 <div className="bottom-sec">
