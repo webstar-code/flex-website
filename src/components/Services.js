@@ -7,7 +7,7 @@ const Services = () => {
         <div className="services">
             <h2 className="text-2xl font-semibold">SERVICES</h2>
             <div className="services-card">
-                <Link to="/design" className="card"><div className="card-2">
+                <Link to="/design" className="card  hover:scale-110 transition-all transform"><div className="card-2">
                     <div className="card-img">
                         <img src={design} alt="" />
                     </div>
@@ -15,7 +15,7 @@ const Services = () => {
                         <h3  className="text-base font-semibold">DESIGN</h3>
                     </div>
                 </div></Link>
-                <Link to="/development" className="card"><div className="card-2">
+                <Link to="/development" className="card hover:scale-110 transition-all transform"><div className="card-2">
 
                     <div className="card-img">
                         <img src={development} alt="" />

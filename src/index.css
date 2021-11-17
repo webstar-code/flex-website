@@ -21,8 +21,13 @@
         font-family: 'Josefin Sans', sans-serif;
     }
     a{
-        text-decoration: none;
-        color: #fff;
+        transform: translateZ(0);
+backface-visibility: hidden;
+-webkit-filter: blur(0);
+/* -webkit-font-smoothing: subpixel-antialiased; */
+
+        /* text-decoration: none;
+        color: #fff; */
     }
 
 }

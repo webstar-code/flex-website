@@ -21,6 +21,7 @@ import production from '../assets/production.png'
 import ResponsivePortfolio from './ResponsivePortfolio'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Button from './Button'
 
 const MainPage = ({ setIndex, index }) => {
 	gsap.registerPlugin(ScrollTrigger);
@@ -71,10 +72,10 @@ const MainPage = ({ setIndex, index }) => {
 		<>
 			<Header />
 			<div className="socail-icons">
-				<a href="https://www.facebook.com/flexxited/" target="_blank"><AiFillFacebook className="icon " /></a>
-				<a href="https://www.instagram.com/flexxited/" target="_blank"><AiFillInstagram className="icon " /></a>
-				<a href="https://www.behance.net/flexxitbydixit" target="_blank"><AiFillBehanceSquare className="icon " /></a>
-				<a href="https://twitter.com/flexxited" target="_blank"><AiFillTwitterSquare className="icon" /></a>
+				<a href="https://www.facebook.com/flexxited/" target="_blank"><AiFillFacebook className="icon transform transition-transform hover:scale-105" /></a>
+				<a href="https://www.instagram.com/flexxited/" target="_blank"><AiFillInstagram className="icon transform transition-transform hover:scale-105" /></a>
+				<a href="https://www.behance.net/flexxitbydixit" target="_blank"><AiFillBehanceSquare className="icon transform transition-transform hover:scale-105" /></a>
+				<a href="https://twitter.com/flexxited" target="_blank"><AiFillTwitterSquare className="icon transform transition-transform hover:scale-105" /></a>
 			</div>
 			<div className="main-page" data-aos="fade-up">
 				<div className="banner-title">
@@ -129,7 +130,7 @@ const MainPage = ({ setIndex, index }) => {
 					<p className="w-full md:w-11/12 text-lg leading-normal text-center px-5 py-5">
 						We are committed to building robust and scalable designs and applications that create efficient business processes and adds value to our client's businesses.
 					</p>
-					<RouterLink to="/connect"><button className="bg-white font-bold font-Josefin border-none outline-none my-5 px-8 py-4 md:px-12 md:py-6 rounded-full tracking-widest text-sm cursor-pointer shadow-lg text-primary">Get in touch</button></RouterLink>
+					<Button text="Get in touch" path="/connect" />
 				</div>
 			</div>
 			<div className="w-full flex flex-col items-center justify-center bg-primary pt-44">
@@ -148,6 +149,8 @@ const MainPage = ({ setIndex, index }) => {
 					<CountryCard country="Germany" flag={INDIA} />
 					<CountryCard country="Norway" flag={INDIA} />
 				</div>
+				<h2 className="text-2xl font-semibold mt-8">And More...</h2>
+
 			</div>
 			<div className="clients process">
 				<h2 className="text-2xl font-semibold">PROCESS</h2>
@@ -160,17 +163,13 @@ const MainPage = ({ setIndex, index }) => {
 			</div>
 
 			{/* <ResponsivePortfolio setIndex={setIndex} index={index} /> */}
-			<div className="w-full flex items-center justify-center bg-primary pt-24 p-6 md:pt-48 md:p-24 ">
+			<div className="w-full flex items-center justify-center bg-primary py-24 p-6 md:py-48 md:p-24 ">
 				<div className="bg-secondary md:mx-28 my-0 w-full md:w-9/12 flex flex-col items-center justify-center py-10 md:p-14 drop-shadow-2xl" style={{ boxShadow: '20px 20px 25px #0000009E' }}>
 					<h3 className="text-base font-black md:text-2xl py-5 text-center">ARE YOU READY TO START?</h3>
 					<p className="w-full md:w-11/12 text-lg leading-normal text-center px-5 py-5">
 						We are committed to building robust and scalable designs and applications that create efficient business processes and adds value to our client's businesses.
 					</p>
-					<RouterLink to="/connect">
-						<button className="bg-white border-none outline-none px-12 py-6 rounded-full font-extrabold tracking-wide cursor-pointer shadow-lg text-primary">
-							Get in Touch
-						</button>
-					</RouterLink>
+					<Button text="Get in touch" path="/connect" />
 				</div>
 			</div>
 			<Footer />
@@ -179,5 +178,7 @@ const MainPage = ({ setIndex, index }) => {
 
 	)
 }
+
+
 
 export default MainPage

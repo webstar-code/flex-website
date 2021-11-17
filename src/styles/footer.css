@@ -1,3 +1,27 @@
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
 .footer{
     width: 100%;
     background: #1A1A1A;
@@ -30,6 +54,7 @@
     margin: 0 30px;
     letter-spacing: 2px;
     cursor: pointer;
+    text-align: center;
 }
 .terms-services {
     margin-top: 5rem;
@@ -44,5 +69,8 @@
     }
     .contact-details p{
         margin: 10px 0;
+    }
+    .contact-details p,.terms-services p{
+        margin: 0px 15px;
     }
 }

@@ -7,11 +7,14 @@ const Slider = ({ data , index = 0 }) => {
   const [currentItem, setCurrentItem] = useState(data[index]);
   const [currentIndex, setCurrentIndex] = useState(index)
   const lengths = data.length
+  const [activeIndex, setActiveIndex] = useState(Math.round(currentItem.images.length / 2 - 1));
 
   useEffect(() => {
     let x = data[currentIndex];
     setCurrentItem(x);
+    setActiveIndex(Math.round(currentItem.images.length / 2 - 1));
   }, [currentIndex]);
+
 
 
   const preSlide = () => {
@@ -22,7 +25,6 @@ const Slider = ({ data , index = 0 }) => {
     setCurrentIndex(currentIndex === lengths - 1 ? 0 : currentIndex + 1)
   }
 
-  const [activeIndex, setActiveIndex] = useState(Math.round(currentItem.images.length / 2 - 1));
 
   // useEffect(() => {
   //   console.log("changed");

@@ -8,11 +8,12 @@ import website from '../assets/website.png'
 import { Link } from 'react-router-dom'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import { FaLongArrowAltLeft } from 'react-icons/fa'
-import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare } from 'react-icons/ai'
+import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillBehanceSquare } from 'react-icons/ai'
 import CloseHeader from '../components/CloseHeader';
 import { UNION } from '../assets'
 import Carousel from '../components/Carousals'
 import '../styles/carousal.css'
+import Button from '../components/Button'
 
 let data = [
 	{
@@ -33,8 +34,17 @@ const Development = () => {
 	const [activeIndex, setActiveIndex] = useState(Math.round(data.length / 2 - 1));
 
 	const [activeItem, setActiveItem] = useState(data[activeIndex]);
+	
+	let itemWidth;
+	const { innerWidth, innerHeight } = window;
+	if (innerWidth > 768) {
+		itemWidth = 450;
+	} else if (innerWidth > 428) {
+		itemWidth = 400;
+	} else {
+		itemWidth = 330;
+	}
 
-	const itemWidth = 450;
 	const [currentItem, setCurrentItem] = useState(data[1]);
 	const [currentIndex, setCurrentIndex] = useState(activeIndex)
 	const lengths = data.length
@@ -109,11 +119,12 @@ const Development = () => {
 							<p className="w-full md:w-11/12 text-lg leading-normal text-center px-5 py-5">
 								We are committed to building robust and scalable designs and applications that create efficient business processes and adds value to our client's businesses.
 							</p>
-							<Link to="/connect"><button className="bg-white font-bold font-Josefin border-none outline-none my-5 px-8 py-4 md:px-12 md:py-6 rounded-full tracking-widest text-sm cursor-pointer shadow-lg text-primary">Get in touch</button></Link>
+							<Button text="get in touch" path="/connect" />
 							<div className="footer-social-icons connect-i">
-								<AiFillFacebook className="icon" />
-								<AiFillInstagram className="icon" />
-								<AiFillTwitterSquare className="icon" />
+								<a href="https://www.facebook.com/flexxited/" target="_blank"><AiFillFacebook className="my-2 mx-5 text-3xl last:mr-0 transform transition-transform hover:scale-105 " /></a>
+								<a href="https://www.instagram.com/flexxited/" target="_blank"><AiFillInstagram className="my-2 mx-5 text-3xl last:mr-0 transform transition-transform hover:scale-105 " /></a>
+								<a href="https://www.behance.net/flexxitbydixit" target="_blank"><AiFillBehanceSquare className="my-2 mx-5 text-3xl last:mr-0 transform transition-transform hover:scale-105 " /></a>
+								<a href="https://twitter.com/flexxited" target="_blank"><AiFillTwitterSquare className="my-2 mx-5 text-3xl last:mr-0 transform transition-transform hover:scale-105" /></a>
 							</div>
 						</div>
 					</div>
