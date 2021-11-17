@@ -59,7 +59,7 @@ const Header = () => {
                         <Link>CORPORATE</Link>
                     </h3>
                     <h3 className={`${pathname === '/services' ? "active" : "none"}`}>
-                        <Link>SERVICES</Link>
+                        <Link to="/design">SERVICES</Link>
                     </h3>
                     <h3 className={`${pathname === '/portfolio' ? "active" : "none"}`}>
                         <Link to="/portfolio">PORTFOLIO</Link>

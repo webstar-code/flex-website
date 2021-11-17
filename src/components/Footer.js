@@ -6,7 +6,7 @@ import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillBehanceSqua
 
 const Footer = () => {
     return (
-        <div className="w-full pt-16 bg-primary flex flex-col items-center justify-center px-5 py-10" style={{ boxShadow: '    box-shadow: black 0px -1px 20px 4px' }}>
+        <div className="w-full pt-16 bg-primary flex flex-col items-center justify-center px-5 py-10" style={{ boxShadow: 'black 0px -1px 20px 4px' }}>
             <div className="w-28 cursor-pointer">
                 <img src={FLEX_LOGO2X} alt="" />
             </div>

@@ -22,6 +22,7 @@ import ResponsivePortfolio from './ResponsivePortfolio'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Button from './Button'
+import { Timeline } from 'gsap/gsap-core'
 
 const MainPage = ({ setIndex, index }) => {
 	gsap.registerPlugin(ScrollTrigger);
@@ -37,6 +38,7 @@ const MainPage = ({ setIndex, index }) => {
 					trigger: box,
 					start: "20px 90%",
 					end: "top 30%",
+					scrub: true,
 					toggleActions: "restart none none none",
 
 					immediateRender: false
@@ -64,6 +66,10 @@ const MainPage = ({ setIndex, index }) => {
 		})
 
 
+		
+		let x = gsap.timeline().from('.upper', { x: 800, duration: 0.25})
+		.from('.lower', { x: -800, duration: 0.25}).restart();
+		x.repeat(3)
 	}, []);
 
 
@@ -78,8 +84,10 @@ const MainPage = ({ setIndex, index }) => {
 				<a href="https://twitter.com/flexxited" target="_blank"><AiFillTwitterSquare className="icon transform transition-transform hover:scale-105" /></a>
 			</div>
 			<div className="main-page" data-aos="fade-up">
-				<div className="banner-title">
+				<div className="banner-title overflow-hidden">
+					<div className="upper w-24 bg-primaryText absolute -left-24" style={{height: '1px'}}></div>
 					<h1>GET FLEXECUTED</h1>
+					<div className="lower w-24 bg-primaryText absolute  -right-24" style={{height: '1px', bottom: '1px'}}></div>
 				</div>
 				<Link className="link" to="business" smooth={true} duration={1000}><p>Scroll Down</p></Link>
 			</div>

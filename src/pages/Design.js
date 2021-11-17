@@ -13,9 +13,9 @@ const Design = () => {
             {/* <CloseHeader /> */}
 
             <div className="w-full relative py-5 md:px-24 md:p-9 bg-primary flex items-center z-40">
-            <h1 className="absolute w-full text-3xl font-semibold mt-4 text-center">Services</h1>
-            <div className="flex ml-auto mr-5 items-center justify-center cursor-pointer">
-                <IoMdClose className="text-4xl" onClick={() => history.goBack()} />
+            <h1 className="absolute w-full left-0 text-3xl font-semibold mt-4 text-center">Services</h1>
+            <div className="flex ml-auto mr-5 items-center justify-center cursor-pointer z-50">
+                <IoMdClose className="text-4xl cursor-pointer" onClick={() => history.goBack()} />
             </div>
         </div>
             <DesignView />

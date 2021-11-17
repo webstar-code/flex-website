@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import liteNLamp from '../assets/lite-lamp.png'
 import domineum from '../assets/dominum.png'
@@ -14,14 +14,10 @@ import { CgArrowLongRight } from 'react-icons/cg'
 import { Link } from 'react-router-dom'
 import { data } from './SliderData'
 import { UNION } from '../assets'
-
-
-
-
+import { gsap } from 'gsap'
 
 
 const OverLay = ({ showOverlay, setShowOverlay, images, index }) => {
-	console.log(index);
 	let itemWidth;
 
 	const { innerWidth, innerHeight } = window;
@@ -33,27 +29,26 @@ const OverLay = ({ showOverlay, setShowOverlay, images, index }) => {
 		itemWidth = 330;
 	}
 
-
 	const [activeIndex, setActiveIndex] = useState(index != null ? index : Math.round(images.length / 2) - 1);
 
 	return (
-		<div className={`overlay-container`}>
+		<div className={`overlay-container  ${showOverlay === true ? 'transform scale-100' : 'transform scale-0'}`}>
 			<div className="w-full md:w-4/5 mx-auto flex justify-end align-bottom p-6 md:p-12" onClick={() => setShowOverlay(false)}>
 				<AiOutlineClose className="text-4xl cursor-pointer" />
 			</div>
-			<div className="mt-10 sm:mt-32 md:mt-12 mx-auto w-full md:w-4/5 flex flex-col items-center overflow-hidden">
+			<div className="mt-10 sm:mt-32 md:mt-8 mx-auto w-full md:w-4/5 flex flex-col items-center overflow-hidden">
 				<div className="flex flex-col items-center justify-center overflow-hidden">
 					<div className="relative w-full m-0 grid grid-rows-1 auto-cols-max grid-flow-col px-16 transition-all overflow-hidden"
 						style={{ left: `-${activeIndex * itemWidth + 64}px`, transform: 'translate(35%, 0px)', height: `${itemWidth}px` }}>
 						{images.map((image, i) =>
-							<div className="flex items-center justify-center" style={{ width: `${itemWidth}px` }}>
+							<div className="flex items-center justify-center" style={{ width: `${itemWidth}px` }} key={i}>
 								<img className={`${activeIndex === i ? 'w-full' : 'w-72 opacity-75'} object-contain`} src={image} style={{ boxShadow: '20px 19px 20px 4px #0000009E' }} />
 							</div>
 						)}
 					</div>
 					<div className="flex justify-center items-center">
 						{images.map((item, i) => {
-							return <span onClick={() => setActiveIndex(i)} className={`${activeIndex === i ? 'w-14 h-14' : 'h-10 w-10'} cursor-pointer`}>
+							return <span onClick={() => setActiveIndex(i)} className={`${activeIndex === i ? 'w-14 h-14' : 'h-10 w-10'} cursor-pointer`} key={i}>
 								<BsDot className="w-full h-full" /></span>
 						})}
 					</div>
@@ -75,6 +70,14 @@ const PCard = ({ images, className, name, i }) => {
 		setShowOverlay(true);
 	}
 
+
+	function onMouseover(e) {
+		gsap.fromTo(e.target, {x: -50}, {x: 0})
+
+		// let tl = gsap.timeline();
+		// tl.to(".next", {x: 200})
+		// .to(".next", {x: 0})
+	}
 	// useEffect(() => {
 	// }, [selectedIndex]);
 
@@ -88,7 +91,7 @@ const PCard = ({ images, className, name, i }) => {
 				</div>
 				<div className="des">
 					<h1 className="uppercase">{name}</h1>
-					<img src={UNION} className="cursor-pointer" onClick={() => history.push('/portfolio', { state: { name, index: i } })} />
+					<img src={UNION} className="cursor-pointer next" onMouseOver={(e) => onMouseover(e)} onClick={() => history.push('/portfolio', { state: { name, index: i } })} />
 				</div>
 
 			</div>
@@ -110,9 +113,9 @@ const Portfolio = ({ setIndex, index }) => {
 			<div className="portfolio-items">
 				{data.map((item, i) =>
 					(i % 2 == 0) ?
-						<PCard images={item.images} name={item.title} i={i} className="portfolio-item" />
+						<PCard images={item.images} name={item.title} i={i} className="portfolio-item" key={i} />
 						:
-						<PCard images={item.images} name={item.title} i={i} className="portfolio-item reverse" />
+						<PCard images={item.images} name={item.title} i={i} className="portfolio-item reverse" key={i} />
 				)}
 			</div>
 			<Link to="/portfolio">

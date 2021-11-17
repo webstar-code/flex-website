@@ -81,7 +81,6 @@ const DesignView = () => {
   }
 
   const nextSlide = () => {
-    console.log(currentIndex, lengths);
     if (currentIndex + 1 < lengths) {
       setCurrentIndex(currentIndex + 1)
     }
@@ -100,8 +99,8 @@ const DesignView = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center mt-10">
       <div className="flex items-center justify-center">
-        <h1 onClick={handleGraphic} className={`${graphic && 'text-3xl transition-all'} text-sm font-semibold md:text-2xl transition-all cursor-pointer mr-2 tracking-wider`}>Graphic Design</h1>
-        <h1 onClick={handleUIUX} className={`${uiux && 'text-3xl transition-all'} text-sm font-semibold md:text-2xl transition-all cursor-pointer tracking-wider`}>UI/UX Design</h1>
+        <h1 onClick={handleGraphic} className={`${graphic ? 'text-3xl transition-all' : 'text-sm md:text-xl'}  font-semibold transition-all cursor-pointer mr-4 tracking-wider`}>Graphic Design</h1>
+        <h1 onClick={handleUIUX} className={`${uiux ?  'text-3xl transition-all' : 'text-sm md:text-xl'} font-semibold transition-all cursor-pointer tracking-wider`}>UI/UX Design</h1>
       </div>
       <div className="active-design-area">
         <div className={`line ${graphic && 'active'}`}></div>
